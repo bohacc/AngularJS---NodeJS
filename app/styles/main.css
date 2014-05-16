@@ -1,0 +1,177 @@
+.mac-tag-autocomplete{position:relative;display:inline-block;border:1px solid #ECECEC;background:#fff;margin:0;padding:0;}
+.mac-tag-autocomplete .tag-list{margin:0;padding-left:0;}
+.mac-tag-autocomplete .tag-list .tag{padding:3px 20px 3px 5px;margin:3px;position:relative;display:inline-block;list-style:none;font-size:13px;line-height:13px;-webkit-border-radius:3px;border-radius:3px;}
+.mac-tag-autocomplete .tag-list .tag.label{background:-webkit-linear-gradient(top, #eaf0ff, #dee8ff);background:-moz-linear-gradient(top, #eaf0ff, #dee8ff);background:-o-linear-gradient(top, #eaf0ff, #dee8ff);background:-ms-linear-gradient(top, #eaf0ff, #dee8ff);background:linear-gradient(to bottom, #eaf0ff, #dee8ff);border:1px solid #bfc9e1;text-shadow:none;color:#000;font-weight:normal;-webkit-box-shadow:0 0 2px #fff inset,0 1px 0 rgba(0,0,0,0.05);box-shadow:0 0 2px #fff inset,0 1px 0 rgba(0,0,0,0.05)}
+.mac-tag-autocomplete .tag-list .tag .tag-close{position:absolute;right:6px;color:#9da6b7;cursor:pointer}
+.mac-tag-autocomplete .tag-list .tag.input-tag{white-space:nowrap;padding:0;}
+.mac-tag-autocomplete .tag-list .tag.input-tag .text-input{color:#666;background:transparent;padding:5px;margin:0;border:none !important;-webkit-box-shadow:none;box-shadow:none}
+.mac-tag-autocomplete .tag-list .tag.input-tag.fullwidth{width:100%;}
+.mac-tag-autocomplete .tag-list .tag.input-tag.fullwidt
+/*.mac-tag-autocomplete input {border: 0px;width: 100%;margin-bottom: 0px;}*/
+
+.inputBox {
+    border: 0px;
+}
+
+.box-angucomplete {width: 362px}
+
+.header-alerts {
+    /*position: absolute;
+   top: 80px;*/
+    width: 100%;
+}
+
+.font-small {
+    font-size: 10pt;
+}
+
+.modal_header_bckg {
+    background-color: #dddddd;
+}
+
+/*Lading bar*/
+.time-divider {
+    vertical-align: middle;
+    height: 100px;
+}
+
+#loading-bar-spinner {
+    z-index: 2000;
+}
+#loading-bar .bar {
+    height: 4px;
+}
+
+/*Main*/
+.center {
+    margin-left:auto;
+    margin-right:auto;
+    width:70%;
+}
+
+.content {
+    margin-top: 60px;
+}
+
+/*.control-label {
+    float: left;
+    width: 50px;
+    padding-top: 5px;
+    text-align: right;
+}*/
+
+.controls {
+    margin-left: 70px;
+}
+
+.login-box {
+    width: 380px;
+    /*margin-top: 90px;*/
+}
+
+.footer-page {
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    background-color: #EEEEEE;
+    position: fixed; bottom: 0;
+}
+
+.alert-info .datum {
+    color: #000000;
+    font-size: 0.8em;
+    font-weight: bold;
+    position: relative; left: -5px; top: -5px;
+}
+
+.main-box {
+    margin: 20px;
+}
+
+.contacts-accordions {
+    background-color: #ffffff;
+}
+
+
+
+
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

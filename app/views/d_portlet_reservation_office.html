@@ -1,0 +1,73 @@
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Nová rezervace místnosti</h4>
+            </div>
+            <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+            <form class="form-horizontal" role="form" ng-submit="postReservationOffice()">
+                <div class="modal-body">
+                    <div class="main-box">
+
+                        <div class="form-group">
+                            <label for="room" class="col-sm-4">Místnost</label>
+                            <div class="col-sm-7">
+                                <select id="room" name="room" ng-init="room = rooms[0]" ng-options="item.name for item in rooms" ng-model="reservationOffice.room" class="form-control" ng-required="true"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date" class="col-sm-4">Datum rezervace</label>
+                            <div class="col-sm-7">
+                                <p class="input-group">
+                                    <input type="text" id="date" class="form-control" datepicker-popup="{{format}}" ng-model="reservationOffice.date" is-open="opened" min="minDate" max="maxDate" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="time_from" class="col-sm-4">Čas od - do</label>
+                            <div class="col-sm-3">
+                                <div id="time_from" ng-model="reservationOffice.time_from" style="display:inline-block;">
+                                    <timepicker hour-step="hstep" minute-step="mstep" show-meridian="ismeridian" ng-required="true"></timepicker>
+                                </div>
+                            </div>
+                            <div class="col-sm-1 time-divider">
+                                <span class="time-divider">-</span>
+                            </div>
+                            <div class="col-sm-3">
+                                <div id="time_to" ng-model="reservationOffice.time_to" style="display:inline-block;">
+                                    <timepicker hour-step="hstep" minute-step="mstep" show-meridian="ismeridian" ng-required="true"></timepicker>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Uložit</button>
+                    <button class="btn btn-default" data-dismiss="modal">Zavřít</button>
+                </div>
+            </form>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<accordion close-others="oneAtATime">
+    <accordion-group heading="{{title}}" is-open="true">
+        <alert ng-repeat="alert in alertsMain" type="alert.type" close="closeAlertMain($index)">{{alert.msg}}</alert>
+        <div>
+            <a href="#/rezervace-mistnosti">Otevřít rezervace místností</a>
+            &nbsp;|&nbsp;
+            <a href="javascript:void(0)" data-toggle="modal" data-target="#myModal">Nová rezervace</a>
+        </div>
+        <div ng-repeat="item in events">
+            {{item.title}}
+            <span>&nbsp;&nbsp;&nbsp;</span>
+            <button class="btn btn-warning" ng-click="deleteItem($index)">smazat</button>
+        </div>
+    </accordion-group>
+</accordion>
